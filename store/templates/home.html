@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content  %}
+<div class="container-fluid" style="background-color:whitesmoke;">
+    <div style="text-align: center; color: green; padding-bottom: 10px;"><h4>groceries</h4></div>
+    <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 table-responsive" style="padding-bottom: 10px;">
+    {% for products in storeitem %}
+    <div class="col" >
+        <div class="card shadow-lg ">
+            <img src="" alt="">
+
+            <div class="card-body">
+                <div class="card-title">
+                    <h3> {{products.p_name}} </h3>
+                </div>
+                <div class="card-text">
+                    <p> {{products.p_description}} </p>
+                </div>
+                <div>
+                    <h6> {{products.p_price}} </h6>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button">add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+<div class="container" style="background-color: whitesmoke;">
+    <div style="text-align: center; color: green; padding-bottom: 10px;"><h4>shoes</h4></div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="padding-bottom: 10px;">
+    {% for products in storeitem %}
+    <div class="col" id="item_col">
+        <div class="card shadow-lg ">
+            <img src="https://images.pexels.com/photos/1393382/pexels-photo-1393382.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+
+            <div class="card-body">
+                <div class="card-title">
+                    <h3> {{products.p_name}} </h3>
+                </div>
+                <div class="card-text">
+                    <p> {{products.p_description}} </p>
+                </div>
+                <div>
+                    <h6> {{products.p_price}} </h6>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" id="addtocart" type="button">add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+<div class="container" style="background-color: whitesmoke;">
+    <div style="text-align: center; color: green; padding-bottom: 10px;"><h4>cloths</h4></div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="padding-bottom: 10px;">
+    {% for products in storeitem %}
+    <div class="col">
+        <div class="card shadow-lg ">
+            <img src="https://images.pexels.com/photos/1393382/pexels-photo-1393382.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+
+            <div class="card-body">
+                <div class="card-title">
+                    <h3> {{products.p_name}} </h3>
+                </div>
+                <div class="card-text">
+                    <p> {{products.p_description}} </p>
+                </div>
+                <div>
+                    <h6> {{products.p_price}} </h6>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button">add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock  %}

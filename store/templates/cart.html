@@ -1,0 +1,22 @@
+{% for item in items %}
+<div style="align-items:center;"> 
+    <table class="table table-bordered border-primary">
+        <thead>
+            <tr>
+                <th scope="col"> item</th>
+                <th scope="col">quantity</th>
+                <th scope="col">unit price</th>
+                <th scope="col">subtotal</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td> {{items.products.p_name}} </td>
+                <td>34</td>
+                <td>45</td>
+                <td>8584</td>
+            </tr>
+        </body>
+    </table>
+</div>
+{% endfor %}
